@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/form";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
+import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -36,6 +37,12 @@ const formSchema = z.object({
 });
 
 export default function ContactSection() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -46,11 +53,39 @@ export default function ContactSection() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // In a real application, you would send the form data to your backend or a service like Formspree
-    console.log(values);
-    alert("Form submitted! In a real application, this would send your message.");
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to send message");
+      }
+
+      setSubmitStatus({
+        type: "success",
+        message: data.message || "Your message has been sent successfully!",
+      });
+      form.reset();
+    } catch (error) {
+      console.error("Error sending message:", error);
+      setSubmitStatus({
+        type: "error",
+        message: error instanceof Error ? error.message : "Failed to send message",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -127,7 +162,24 @@ export default function ContactSection() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" className="w-full">Send Message</Button>
+                {submitStatus.type && (
+                  <div
+                    className={`p-4 rounded-md ${
+                      submitStatus.type === "success"
+                        ? "bg-green-50 text-green-700 border border-green-200"
+                        : "bg-red-50 text-red-700 border border-red-200"
+                    }`}
+                  >
+                    {submitStatus.message}
+                  </div>
+                )}
+                <Button 
+                  type="submit" 
+                  className="w-full" 
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </Button>
               </form>
             </Form>
           </div>

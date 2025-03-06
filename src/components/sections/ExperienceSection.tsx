@@ -114,21 +114,21 @@ export default function ExperienceSection() {
                 <div>
                   <h4 className="font-medium mb-2">Before Automation</h4>
                   <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-                    <li>Manual deployment process taking 2+ hours</li>
-                    <li>20+ hours weekly on repetitive tasks</li>
-                    <li>Error-prone manual testing cycles</li>
-                    <li>Slow incident response</li>
-                    <li>Complex system integration</li>
+                    <li>Manual data entry across multiple systems</li>
+                    <li>Time-consuming client onboarding processes</li>
+                    <li>Inefficient Excel-based reporting workflows</li>
+                    <li>Disconnected business systems and data silos</li>
+                    <li>Repetitive data processing tasks</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-medium mb-2">After Automation</h4>
                   <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-                    <li>Automated deployments in under 30 minutes</li>
-                    <li>95% reduction in manual task time</li>
-                    <li>Consistent, reliable test coverage</li>
-                    <li>Proactive monitoring and quick resolution</li>
-                    <li>Seamless API-driven integrations</li>
+                    <li>Seamless data flow between systems via APIs</li>
+                    <li>Streamlined client journeys with Go High Level</li>
+                    <li>Automated reporting with Excel VBA and Python</li>
+                    <li>Integrated workflows with Zapier and Make</li>
+                    <li>Efficient data processing with Pandas/Polars</li>
                   </ul>
                 </div>
               </div>

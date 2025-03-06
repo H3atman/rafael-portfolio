@@ -15,14 +15,14 @@ export default function SkillsSection() {
           </h2>
           <Separator className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-6 text-lg text-muted-foreground max-w-[800px]">
-            My expertise in automation technologies and tools allows me to create efficient, scalable solutions.
+            My expertise in automation technologies and tools allows me to create efficient, scalable solutions that bridge the gap between code and no-code approaches.
           </p>
         </div>
 
         <Tabs defaultValue="programming" className="w-full max-w-4xl mx-auto">
           <TabsList className="grid grid-cols-3 mb-8">
             <TabsTrigger value="programming">Programming</TabsTrigger>
-            <TabsTrigger value="automation">Automation Tools</TabsTrigger>
+            <TabsTrigger value="automation">No-Code/Low-Code</TabsTrigger>
             <TabsTrigger value="other">Other Skills</TabsTrigger>
           </TabsList>
           
@@ -43,11 +43,11 @@ export default function SkillsSection() {
               <h3 className="text-lg font-medium mb-4">Programming Applications</h3>
               <div className="flex flex-wrap gap-3">
                 <Badge className="px-3 py-1">API Development</Badge>
-                <Badge className="px-3 py-1">Script Automation</Badge>
                 <Badge className="px-3 py-1">Data Processing</Badge>
                 <Badge className="px-3 py-1">Web Development</Badge>
-                <Badge className="px-3 py-1">Task Schedulers</Badge>
-                <Badge className="px-3 py-1">Test Automation</Badge>
+                <Badge className="px-3 py-1">Excel VBA Automation</Badge>
+                <Badge className="px-3 py-1">FastAPI</Badge>
+                <Badge className="px-3 py-1">Next.js</Badge>
               </div>
             </div>
           </TabsContent>
@@ -68,12 +68,12 @@ export default function SkillsSection() {
             <div className="pt-6">
               <h3 className="text-lg font-medium mb-4">Automation Use Cases</h3>
               <div className="flex flex-wrap gap-3">
-                <Badge className="px-3 py-1">Deployment Pipelines</Badge>
-                <Badge className="px-3 py-1">Infrastructure as Code</Badge>
-                <Badge className="px-3 py-1">Configuration Management</Badge>
-                <Badge className="px-3 py-1">Release Automation</Badge>
-                <Badge className="px-3 py-1">Environment Setup</Badge>
-                <Badge className="px-3 py-1">Monitoring & Alerts</Badge>
+                <Badge className="px-3 py-1">Client Onboarding</Badge>
+                <Badge className="px-3 py-1">Workflow Automation</Badge>
+                <Badge className="px-3 py-1">Data Integration</Badge>
+                <Badge className="px-3 py-1">Business Process Automation</Badge>
+                <Badge className="px-3 py-1">CRM Automation</Badge>
+                <Badge className="px-3 py-1">Form & Survey Processing</Badge>
               </div>
             </div>
           </TabsContent>
@@ -95,10 +95,10 @@ export default function SkillsSection() {
               <h3 className="text-lg font-medium mb-4">Other Expertise</h3>
               <div className="flex flex-wrap gap-3">
                 <Badge className="px-3 py-1">Process Optimization</Badge>
-                <Badge className="px-3 py-1">System Architecture</Badge>
+                <Badge className="px-3 py-1">Data Visualization</Badge>
                 <Badge className="px-3 py-1">Technical Documentation</Badge>
-                <Badge className="px-3 py-1">Cloud Services</Badge>
-                <Badge className="px-3 py-1">Team Collaboration</Badge>
+                <Badge className="px-3 py-1">AI-Assisted Development</Badge>
+                <Badge className="px-3 py-1">System Integration</Badge>
                 <Badge className="px-3 py-1">Problem Solving</Badge>
               </div>
             </div>
@@ -133,7 +133,7 @@ export default function SkillsSection() {
                 </svg>
               </div>
               <h4 className="font-medium">Simplify First</h4>
-              <p className="text-sm text-muted-foreground">Before automating, I focus on simplifying the process to ensure maximum efficiency.</p>
+              <p className="text-sm text-muted-foreground">Before automating, I focus on simplifying the process to ensure maximum efficiency with minimal complexity.</p>
             </div>
             
             <div className="space-y-2">
@@ -155,8 +155,8 @@ export default function SkillsSection() {
                   <path d="M12 8v8" />
                 </svg>
               </div>
-              <h4 className="font-medium">Add Value</h4>
-              <p className="text-sm text-muted-foreground">I prioritize automation that delivers tangible business value and significant time savings.</p>
+              <h4 className="font-medium">Right Tool for the Job</h4>
+              <p className="text-sm text-muted-foreground">I blend code and no-code solutions to deliver the most efficient and maintainable automation for each unique situation.</p>
             </div>
             
             <div className="space-y-2">
@@ -178,7 +178,7 @@ export default function SkillsSection() {
                 </svg>
               </div>
               <h4 className="font-medium">Sustainable Growth</h4>
-              <p className="text-sm text-muted-foreground">I build solutions that scale with your business and adapt to changing requirements.</p>
+              <p className="text-sm text-muted-foreground">I build solutions that scale with your business and adapt to changing requirements without requiring constant maintenance.</p>
             </div>
           </div>
         </div>

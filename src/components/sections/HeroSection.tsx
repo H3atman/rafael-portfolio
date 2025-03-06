@@ -87,6 +87,11 @@ export default function HeroSection() {
                 <span className="absolute inset-0 bg-primary-dark transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
               </Link>
             </Button>
+            <Button asChild size="lg" variant="secondary">
+              <Link href="#booking">
+                <span className="relative z-10">Book a Call</span>
+              </Link>
+            </Button>
             <Button variant="outline" size="lg" asChild>
               <Link href={websiteConfig.resumeLink} target="_blank" rel="noopener noreferrer">
                 View Resume
