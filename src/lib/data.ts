@@ -1,11 +1,11 @@
 export const websiteConfig = {
   name: "Rafael",
-  title: "Automation Specialist",
+  title: "Operations Manager & Automation Specialist",
   email: "rafael@rvcodes.com",
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
-  about: "I'm an experienced automation specialist with expertise in streamlining workflows, implementing no-code/low-code solutions, and developing robust automated systems that enhance efficiency and reduce manual effort. I combine programming skills with no-code tools to deliver optimal solutions.",
-  resumeLink: "/resume.pdf",
+  github: "https://github.com/H3atman",
+  linkedin: "https://www.linkedin.com/in/villanueva-rafael/",
+  about: "As an Operations Manager at FirmOS Inc. with expertise in automation, I specialize in streamlining client communication processes and optimizing operational systems. I've enhanced email deliverability rates from 76% to 98% through implementing DMARC, SPF, and DKIM protocols, while creating custom automation with deeplink technology that reduced technical issues by 90%. With a background in data analysis at the Philippine National Police from 2019 to 2024, I combine technical skills in API integrations, Python, and JavaScript with strong communication and problem-solving abilities to deliver automation solutions that significantly reduce manual effort and improve operational reliability.",
+  resumeLink: "/resume/Rafael Villanueva - Resume.pdf",
 };
 
 export const navigationLinks = [
@@ -21,66 +21,84 @@ export const skillsData = {
   programmingLanguages: [
     { name: "Python", level: 90 },
     { name: "JavaScript", level: 85 },
-    { name: "FastAPI", level: 85 },
-    { name: "Next.js", level: 80 },
-    { name: "Excel VBA", level: 75 },
+    { name: "Web Development", level: 80 },
+    { name: "API Integrations", level: 85 },
+    { name: "Microsoft 365", level: 80 },
   ],
   automationTools: [
-    { name: "Go High Level API", level: 90 },
-    { name: "Airtable REST API", level: 85 },
-    { name: "Zapier", level: 90 },
-    { name: "Make (Integromat)", level: 85 },
-    { name: "Airtable Automations", level: 80 },
-    { name: "GHL Workflows", level: 75 },
+    { name: "Go High Level CRM", level: 90 },
+    { name: "Airtable", level: 85 },
+    { name: "Slack Integrations", level: 90 },
+    { name: "Google Workspace", level: 85 },
+    { name: "Power BI", level: 80 },
+    { name: "Email Protocols (DMARC/SPF/DKIM)", level: 90 },
   ],
   otherSkills: [
-    { name: "Data Processing (Pandas/Polars)", level: 90 },
-    { name: "Streamlit", level: 85 },
-    { name: "REST APIs", level: 85 },
-    { name: "AI Tools (ChatGPT, Claude, Deepseek)", level: 90 },
-    { name: "Process Optimization", level: 85 },
+    { name: "Data Processing & Analysis", level: 90 },
+    { name: "Critical Thinking", level: 85 },
+    { name: "Problem-solving", level: 85 },
+    { name: "Communication", level: 90 },
+    { name: "Teamwork/Collaboration", level: 85 },
   ],
 };
 
 export const experienceData = [
   {
-    company: "Tech Innovations Inc.",
-    position: "Automation Specialist",
-    duration: "Jan 2021 - Present",
+    company: "FirmOS Inc.",
+    position: "Operations Manager",
+    duration: "Nov 2024 - March 2025",
     description: [
-      "Developed and maintained Go High Level API integrations and workflows for client automation",
-      "Created data processing pipelines using Python (Pandas, Polars) for efficient data manipulation",
-      "Built FastAPI applications to connect various systems and automate business processes",
-      "Implemented Zapier and Make automations to streamline client workflows and reduce manual tasks",
-      "Utilized AI tools like Claude and ChatGPT to optimize and enhance automation solutions",
+      "Streamlined client communication processes by enhancing email deliverability rates from 76% to 98% through implementation of DMARC, SPF, and DKIM protocols",
+      "Optimized client meeting systems by creating custom automation with deeplink technology, reducing technical issues by 90%",
+      "Eliminated operational overhead for support staff through effective automation implementations",
+      "Improved operational reliability and client satisfaction through technical optimizations"
     ],
   },
   {
-    company: "Digital Solutions Corp",
-    position: "No-Code Automation Developer",
-    duration: "Mar 2018 - Dec 2020",
+    company: "FirmOS Inc.",
+    position: "Automation Specialist / Product Owner",
+    duration: "Sep 2024 - Nov 2024",
     description: [
-      "Designed and implemented Airtable REST API integrations and automations for business processes",
-      "Created Excel VBA solutions to automate manual spreadsheet tasks and reporting",
-      "Developed Streamlit applications for data visualization and interactive dashboards",
-      "Built Next.js web applications for client-facing automation tools and dashboards",
-      "Integrated various systems using no-code tools and custom API connections",
+      "Implemented automation connecting Go High Level CRM to Airtable, streamlining contact and appointment management",
+      "Reduced manual data entry by 75% through efficient integration solutions",
+      "Developed Slack-Airtable integration for Start of Day (SOD) and End of Day (EOD) reporting workflows",
+      "Increased team accountability and improved documentation compliance by 40%"
     ],
   },
   {
-    company: "Software Systems LLC",
-    position: "Data Automation Specialist",
-    duration: "Jun 2016 - Feb 2018",
+    company: "Philippine National Police",
+    position: "Data Controller I",
+    duration: "Oct 2022 - Sep 2024",
     description: [
-      "Automated data processing workflows using Python and pandas for large datasets",
-      "Implemented Excel VBA solutions for financial reporting and data analysis",
-      "Created documentation and workflow automations that improved team efficiency",
-      "Developed custom integrations between business systems using REST APIs",
+      "Effectively stored and secured all outgoing and incoming documents creating physical and digital copies",
+      "Designed interactive PowerBI dashboards to visualize complex data sets, providing actionable insights",
+      "Increased decision-making efficiency by 80% through data visualization improvements",
+      "Prepared and processed large databases, implementing automated systems for data categorization and advanced filtering",
+      "Reduced manual effort by 90% through automation of data processing tasks"
+    ],
+  },
+  {
+    company: "Philippine National Police",
+    position: "Statistician Aide",
+    duration: "Mar 2019 - Oct 2022",
+    description: [
+      "Conducted comprehensive data analysis on crime rates in target neighborhoods, identifying key trends and patterns",
+      "Aided in the development of targeted intervention strategies, resulting in a 5% decrease in overall crime rates per year",
+      "Collaborated with cross-functional teams to develop and deliver informative presentations on crime statistics",
+      "Educated local law enforcement officers on emerging crime trends and provided actionable insights for improved response strategies"
     ],
   },
 ];
 
 export const projectsData = [
+  {
+    title: "Automated Crime Processing Engine",
+    description: "Transform raw CIRAS v2 data into standardized reports with automatic OFFENSE CATEGORY classification and Focus Crimes standardization - eliminating hours of manual Excel processing",
+    technologies: ["Next.js", "React", "API Integration", "Responsive Design"],
+    image: "/projects/crime_stat_webapp.png",
+    link: "https://crime-stat-webapp-demo.vercel.app/",
+    github: "#",
+  },
   {
     title: "Client Onboarding Automation",
     description: "A comprehensive automation system using Go High Level API and Workflows that streamlines the entire client onboarding process, reducing manual steps by 90% and improving client satisfaction.",
@@ -106,9 +124,9 @@ export const projectsData = [
     github: "#",
   },
   {
-    title: "Excel Process Automation",
-    description: "A suite of VBA-powered Excel tools that automates complex financial calculations, reporting, and data analysis, saving hours of manual work each week.",
-    technologies: ["Excel VBA", "Python", "REST APIs", "Data Processing"],
+    title: "Email Deliverability System",
+    description: "Implemented DMARC, SPF, and DKIM protocols to enhance email deliverability rates from 76% to 98%, improving operational reliability and client satisfaction.",
+    technologies: ["DMARC", "SPF", "DKIM", "Email Protocols", "Client Communication"],
     image: "/projects/workflow-automation.jpg",
     link: "#",
     github: "#",
@@ -134,4 +152,4 @@ export const testimonialsData = [
     content: "The automated testing framework not only caught critical bugs early but also significantly reduced our time-to-market for new features.",
     image: "/testimonials/jennifer.jpg",
   },
-]; 
+];

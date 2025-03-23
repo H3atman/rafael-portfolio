@@ -30,6 +30,8 @@ export function ThemeProvider({
   children,
   defaultTheme = "system",
   storageKey = "theme",
+  // attribute is included for compatibility but not used in this implementation
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   attribute = "class",
   enableSystem = true,
   disableTransitionOnChange = false,
@@ -106,4 +108,4 @@ export const useTheme = () => {
   }
   
   return context;
-}; 
+};

@@ -5,13 +5,23 @@ import Link from "next/link";
 import { websiteConfig } from "@/lib/data";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Badge } from "@/components/ui/badge";
-import { useEffect, useState } from "react";
-import { Card } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import { useEffect, useCallback } from "react";
 import { Container } from "@/components/ui/container";
 
+// Debounce function to limit how often a function can be called
+function debounce(func: (args: unknown[]) => void, wait: number) {
+  let timeout: NodeJS.Timeout;
+  return function(...args: unknown[]) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(args), wait);
+  };
+}
+
 export default function HeroSection() {
-  const [activeSection, setActiveSection] = useState("");
+  // Memoize the observer callback to prevent recreating it on each render
+  const handleIntersection = useCallback(() => {
+    // Empty callback for future functionality
+  }, []);
 
   useEffect(() => {
     const sections = document.querySelectorAll('section[id]');
@@ -21,18 +31,17 @@ export default function HeroSection() {
       threshold: 0
     };
     
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, observerOptions);
+    // Create a debounced observer to reduce performance impact
+    const debouncedHandler = debounce(handleIntersection, 100);
+    const observer = new IntersectionObserver(debouncedHandler, observerOptions);
     
     sections.forEach(section => observer.observe(section));
     
-    return () => sections.forEach(section => observer.unobserve(section));
-  }, []);
+    return () => {
+      sections.forEach(section => observer.unobserve(section));
+      observer.disconnect();
+    };
+  }, [handleIntersection]); // Only recreate the effect if the callback changes
 
   return (
     <section
@@ -49,8 +58,8 @@ export default function HeroSection() {
             </span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-[600px]">
-            Hello, I'm <span className="font-semibold text-foreground">{websiteConfig.name}</span>, an{" "}
+          <div className="text-xl text-muted-foreground max-w-[600px]">
+            Hello, I&apos;m <span className="font-semibold text-foreground">{websiteConfig.name}</span>, an{" "}
             <HoverCard>
               <HoverCardTrigger asChild>
                 <span className="cursor-help border-b border-dotted border-primary text-foreground">
@@ -59,7 +68,7 @@ export default function HeroSection() {
               </HoverCardTrigger>
               <HoverCardContent className="w-80">
                 <div className="space-y-2">
-                  <div className="text-sm font-semibold">What does an Automation Specialist do?</div>
+                  <h4 className="text-sm font-semibold">What does an Automation Specialist do?</h4>
                   <p className="text-sm">
                     An Automation Specialist designs, implements, and maintains automated systems and workflows to improve efficiency, reduce manual tasks, and optimize business processes.
                   </p>
@@ -67,15 +76,15 @@ export default function HeroSection() {
               </HoverCardContent>
             </HoverCard>{" "}
             who helps companies streamline operations and boost productivity through custom automation solutions.
-          </p>
+          </div>
           
           <div className="space-y-3">
             <p className="font-medium">Specializing in:</p>
             <div className="flex flex-wrap gap-2">
-              <Badge variant="outline" className="text-sm py-1 px-3">CI/CD Pipelines</Badge>
+              <Badge variant="outline" className="text-sm py-1 px-3">Email Protocols (DMARC/SPF/DKIM)</Badge>
               <Badge variant="outline" className="text-sm py-1 px-3">Process Automation</Badge>
-              <Badge variant="outline" className="text-sm py-1 px-3">Infrastructure as Code</Badge>
-              <Badge variant="outline" className="text-sm py-1 px-3">Test Automation</Badge>
+              <Badge variant="outline" className="text-sm py-1 px-3">CRM Integration</Badge>
+              <Badge variant="outline" className="text-sm py-1 px-3">Data Visualization</Badge>
               <Badge variant="outline" className="text-sm py-1 px-3">Workflow Optimization</Badge>
             </div>
           </div>
@@ -123,20 +132,20 @@ export default function HeroSection() {
                 <h3 className="text-xl font-semibold mb-2">Automation Impact</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                   <div className="p-4 rounded-lg bg-background/80 border border-border">
+                    <div className="text-3xl font-bold text-primary">98%</div>
+                    <div className="text-sm text-muted-foreground">Email deliverability rate</div>
+                  </div>
+                  <div className="p-4 rounded-lg bg-background/80 border border-border">
+                    <div className="text-3xl font-bold text-primary">90%</div>
+                    <div className="text-sm text-muted-foreground">Reduction in technical issues</div>
+                  </div>
+                  <div className="p-4 rounded-lg bg-background/80 border border-border">
                     <div className="text-3xl font-bold text-primary">75%</div>
-                    <div className="text-sm text-muted-foreground">Reduction in deployment time</div>
+                    <div className="text-sm text-muted-foreground">Reduction in manual data entry</div>
                   </div>
                   <div className="p-4 rounded-lg bg-background/80 border border-border">
                     <div className="text-3xl font-bold text-primary">40%</div>
-                    <div className="text-sm text-muted-foreground">Increase in productivity</div>
-                  </div>
-                  <div className="p-4 rounded-lg bg-background/80 border border-border">
-                    <div className="text-3xl font-bold text-primary">60%</div>
-                    <div className="text-sm text-muted-foreground">Fewer manual errors</div>
-                  </div>
-                  <div className="p-4 rounded-lg bg-background/80 border border-border">
-                    <div className="text-3xl font-bold text-primary">30%</div>
-                    <div className="text-sm text-muted-foreground">Reduced operational costs</div>
+                    <div className="text-sm text-muted-foreground">Improvement in documentation</div>
                   </div>
                 </div>
               </div>
@@ -146,4 +155,4 @@ export default function HeroSection() {
       </Container>
     </section>
   );
-} 
+}

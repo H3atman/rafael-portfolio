@@ -15,7 +15,7 @@ export default function Footer() {
               {websiteConfig.name}
             </Link>
             <p className="mt-4 text-muted-foreground max-w-md">
-              Helping businesses streamline operations and boost productivity through custom automation solutions.
+              Operations Manager & Automation Specialist with expertise in streamlining processes, enhancing communication systems, and implementing efficient workflow solutions.
             </p>
             <div className="flex space-x-4 mt-6">
               <a 
@@ -106,19 +106,19 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-lg font-medium mb-4">Services</h3>
+            <h3 className="text-lg font-medium mb-4">Expertise</h3>
             <ul className="space-y-2">
               <li>
                 <Link 
-                  href="#services" 
+                  href="#skills" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  CI/CD Implementation
+                  Email Protocols (DMARC/SPF/DKIM)
                 </Link>
               </li>
               <li>
                 <Link 
-                  href="#services" 
+                  href="#skills" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Workflow Automation
@@ -126,23 +126,23 @@ export default function Footer() {
               </li>
               <li>
                 <Link 
-                  href="#services" 
+                  href="#skills" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Test Automation
+                  API Integrations
                 </Link>
               </li>
               <li>
                 <Link 
-                  href="#services" 
+                  href="#skills" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Infrastructure as Code
+                  Data Processing & Analysis
                 </Link>
               </li>
               <li>
                 <Link 
-                  href="#services" 
+                  href="#skills" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Custom Automation Solutions
@@ -156,7 +156,7 @@ export default function Footer() {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} {websiteConfig.name}. All rights reserved.
+            &copy; {currentYear} {websiteConfig.name} | Operations Manager & Automation Specialist
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link 
@@ -176,4 +176,4 @@ export default function Footer() {
       </Container>
     </footer>
   );
-} 
+}

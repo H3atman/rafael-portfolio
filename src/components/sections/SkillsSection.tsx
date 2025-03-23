@@ -1,13 +1,75 @@
+"use client";
+
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Progress } from "@/components/ui/progress";
 import { skillsData } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 import { Container } from "@/components/ui/container";
+import { useEffect, useRef, useState } from "react";
+import { AnimatedProgress } from "@/components/ui/animated-progress";
 
 export default function SkillsSection() {
+  // Animation states for each tab
+  const [animateProgramming, setAnimateProgramming] = useState(false);
+  const [animateAutomation, setAnimateAutomation] = useState(false);
+  const [animateOther, setAnimateOther] = useState(false);
+  
+  // Reference to the section for intersection observer
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Handle tab change
+  const handleTabChange = (value: string) => {
+    // Reset and trigger animation for the selected tab
+    if (value === "programming") {
+      setAnimateProgramming(false);
+      // Short delay to ensure state is reset before animating
+      setTimeout(() => setAnimateProgramming(true), 50);
+      setAnimateAutomation(false);
+      setAnimateOther(false);
+    } else if (value === "automation") {
+      setAnimateAutomation(false);
+      setTimeout(() => setAnimateAutomation(true), 50);
+      setAnimateProgramming(false);
+      setAnimateOther(false);
+    } else if (value === "other") {
+      setAnimateOther(false);
+      setTimeout(() => setAnimateOther(true), 50);
+      setAnimateProgramming(false);
+      setAnimateAutomation(false);
+    }
+  };
+
+  // Setup intersection observer to trigger animations when the section comes into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          // Initial animation for the default tab
+          setAnimateProgramming(true);
+        } else {
+          // Reset animations when not in view
+          setAnimateProgramming(false);
+          setAnimateAutomation(false);
+          setAnimateOther(false);
+        }
+      },
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
+    );
+
+    const currentRef = sectionRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20" ref={sectionRef}>
       <Container>
         <div className="flex flex-col items-center text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-2">
@@ -15,98 +77,113 @@ export default function SkillsSection() {
           </h2>
           <Separator className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-6 text-lg text-muted-foreground max-w-[800px]">
-            My expertise in automation technologies and tools allows me to create efficient, scalable solutions that bridge the gap between code and no-code approaches.
+            My expertise in operations management and automation technologies allows me to create efficient, scalable solutions that drive operational excellence.
           </p>
         </div>
 
-        <Tabs defaultValue="programming" className="w-full max-w-4xl mx-auto">
+        <Tabs defaultValue="programming" className="w-full max-w-4xl mx-auto" onValueChange={handleTabChange}>
           <TabsList className="grid grid-cols-3 mb-8">
-            <TabsTrigger value="programming">Programming</TabsTrigger>
-            <TabsTrigger value="automation">No-Code/Low-Code</TabsTrigger>
+            <TabsTrigger value="programming">Technical Skills</TabsTrigger>
+            <TabsTrigger value="automation">Automation Tools</TabsTrigger>
             <TabsTrigger value="other">Other Skills</TabsTrigger>
           </TabsList>
           
           <TabsContent value="programming" className="space-y-8">
             <div className="grid gap-6">
-              {skillsData.programmingLanguages.map((skill) => (
+              {skillsData.programmingLanguages.map((skill, index) => (
                 <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between">
                     <span className="font-medium">{skill.name}</span>
                     <span>{skill.level}%</span>
                   </div>
-                  <Progress value={skill.level} className="h-2" />
+                  <AnimatedProgress 
+                    value={skill.level} 
+                    delay={200 + index * 200}
+                    animate={animateProgramming}
+                    className="h-2"
+                  />
                 </div>
               ))}
             </div>
             
             <div className="pt-6">
-              <h3 className="text-lg font-medium mb-4">Programming Applications</h3>
+              <h3 className="text-lg font-medium mb-4">Technical Applications</h3>
               <div className="flex flex-wrap gap-3">
-                <Badge className="px-3 py-1">API Development</Badge>
+                <Badge className="px-3 py-1">API Integrations</Badge>
                 <Badge className="px-3 py-1">Data Processing</Badge>
                 <Badge className="px-3 py-1">Web Development</Badge>
-                <Badge className="px-3 py-1">Excel VBA Automation</Badge>
-                <Badge className="px-3 py-1">FastAPI</Badge>
-                <Badge className="px-3 py-1">Next.js</Badge>
+                <Badge className="px-3 py-1">Microsoft 365</Badge>
+                <Badge className="px-3 py-1">Python</Badge>
+                <Badge className="px-3 py-1">JavaScript</Badge>
               </div>
             </div>
           </TabsContent>
           
           <TabsContent value="automation" className="space-y-8">
             <div className="grid gap-6">
-              {skillsData.automationTools.map((skill) => (
+              {skillsData.automationTools.map((skill, index) => (
                 <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between">
                     <span className="font-medium">{skill.name}</span>
                     <span>{skill.level}%</span>
                   </div>
-                  <Progress value={skill.level} className="h-2" />
+                  <AnimatedProgress 
+                    value={skill.level} 
+                    delay={200 + index * 200}
+                    animate={animateAutomation}
+                    className="h-2"
+                  />
                 </div>
               ))}
             </div>
             
             <div className="pt-6">
-              <h3 className="text-lg font-medium mb-4">Automation Use Cases</h3>
+              <h3 className="text-lg font-medium mb-4">Automation Specialties</h3>
               <div className="flex flex-wrap gap-3">
-                <Badge className="px-3 py-1">Client Onboarding</Badge>
+                <Badge className="px-3 py-1">Email Deliverability</Badge>
                 <Badge className="px-3 py-1">Workflow Automation</Badge>
-                <Badge className="px-3 py-1">Data Integration</Badge>
+                <Badge className="px-3 py-1">DMARC/SPF/DKIM</Badge>
                 <Badge className="px-3 py-1">Business Process Automation</Badge>
-                <Badge className="px-3 py-1">CRM Automation</Badge>
-                <Badge className="px-3 py-1">Form & Survey Processing</Badge>
+                <Badge className="px-3 py-1">CRM Integration</Badge>
+                <Badge className="px-3 py-1">Slack-Airtable Integration</Badge>
               </div>
             </div>
           </TabsContent>
           
           <TabsContent value="other" className="space-y-8">
             <div className="grid gap-6">
-              {skillsData.otherSkills.map((skill) => (
+              {skillsData.otherSkills.map((skill, index) => (
                 <div key={skill.name} className="space-y-2">
                   <div className="flex justify-between">
                     <span className="font-medium">{skill.name}</span>
                     <span>{skill.level}%</span>
                   </div>
-                  <Progress value={skill.level} className="h-2" />
+                  <AnimatedProgress 
+                    value={skill.level} 
+                    delay={200 + index * 200}
+                    animate={animateOther}
+                    className="h-2"
+                  />
                 </div>
               ))}
             </div>
             
             <div className="pt-6">
-              <h3 className="text-lg font-medium mb-4">Other Expertise</h3>
+              <h3 className="text-lg font-medium mb-4">Professional Strengths</h3>
               <div className="flex flex-wrap gap-3">
-                <Badge className="px-3 py-1">Process Optimization</Badge>
-                <Badge className="px-3 py-1">Data Visualization</Badge>
-                <Badge className="px-3 py-1">Technical Documentation</Badge>
-                <Badge className="px-3 py-1">AI-Assisted Development</Badge>
-                <Badge className="px-3 py-1">System Integration</Badge>
+                <Badge className="px-3 py-1">Critical Thinking</Badge>
+                <Badge className="px-3 py-1">Communication</Badge>
                 <Badge className="px-3 py-1">Problem Solving</Badge>
+                <Badge className="px-3 py-1">Adaptability</Badge>
+                <Badge className="px-3 py-1">Teamwork/Collaboration</Badge>
+                <Badge className="px-3 py-1">Process Optimization</Badge>
               </div>
             </div>
           </TabsContent>
         </Tabs>
         
         <div className="mt-16 p-6 bg-muted/30 rounded-lg border border-border max-w-4xl mx-auto">
-          <h3 className="text-xl font-medium mb-4">My Automation Philosophy</h3>
+          <h3 className="text-xl font-medium mb-4">My Professional Philosophy</h3>
           <div className="grid sm:grid-cols-3 gap-6">
             <div className="space-y-2">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -132,8 +209,8 @@ export default function SkillsSection() {
                   <path d="m16.24 7.76 2.83-2.83" />
                 </svg>
               </div>
-              <h4 className="font-medium">Simplify First</h4>
-              <p className="text-sm text-muted-foreground">Before automating, I focus on simplifying the process to ensure maximum efficiency with minimal complexity.</p>
+              <h4 className="font-medium">Optimize Operations</h4>
+              <p className="text-sm text-muted-foreground">Before automating, I focus on optimizing the process to ensure maximum efficiency with minimal complexity.</p>
             </div>
             
             <div className="space-y-2">
@@ -155,8 +232,8 @@ export default function SkillsSection() {
                   <path d="M12 8v8" />
                 </svg>
               </div>
-              <h4 className="font-medium">Right Tool for the Job</h4>
-              <p className="text-sm text-muted-foreground">I blend code and no-code solutions to deliver the most efficient and maintainable automation for each unique situation.</p>
+              <h4 className="font-medium">Data-Driven Solutions</h4>
+              <p className="text-sm text-muted-foreground">I leverage data analysis to inform decisions and create tailored automation solutions that address specific operational challenges.</p>
             </div>
             
             <div className="space-y-2">
@@ -177,12 +254,12 @@ export default function SkillsSection() {
                   <path d="M10 2c1 .5 2 2 2 5" />
                 </svg>
               </div>
-              <h4 className="font-medium">Sustainable Growth</h4>
-              <p className="text-sm text-muted-foreground">I build solutions that scale with your business and adapt to changing requirements without requiring constant maintenance.</p>
+              <h4 className="font-medium">Client Satisfaction</h4>
+              <p className="text-sm text-muted-foreground">I prioritize client communication and reliability, creating solutions that enhance user experience while reducing technical issues.</p>
             </div>
           </div>
         </div>
       </Container>
     </section>
   );
-} 
+}

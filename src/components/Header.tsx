@@ -1,16 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { navigationLinks } from "@/lib/data";
@@ -18,19 +17,39 @@ import { cn } from "@/lib/utils";
 import { Container } from "@/components/ui/container";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
+// Throttle function to limit how often a function can be called
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function throttle<T extends (...args: any[]) => any>(func: T, limit: number) {
+  let inThrottle: boolean;
+  let lastResult: ReturnType<T>;
+  
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  return function(this: any, ...args: Parameters<T>): ReturnType<T> {
+    if (!inThrottle) {
+      inThrottle = true;
+      lastResult = func.apply(this, args);
+      setTimeout(() => (inThrottle = false), limit);
+    }
+    
+    return lastResult;
+  };
+}
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+  // Memoize the scroll handler to prevent recreation on each render
+  const handleScroll = useCallback(() => {
+    setIsScrolled(window.scrollY > 20);
   }, []);
+
+  useEffect(() => {
+    const throttledScroll = throttle(handleScroll, 100);
+    window.addEventListener("scroll", throttledScroll);
+    return () => {
+      window.removeEventListener("scroll", throttledScroll);
+    };
+  }, [handleScroll]);
 
   return (
     <header
@@ -45,9 +64,16 @@ export default function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity"
+          className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity flex items-center"
         >
-          RV CODES
+          <Image 
+            src="/brand_guidelines/logo.png" 
+            alt="RV Logo" 
+            width={40} 
+            height={40} 
+            className="h-auto w-auto"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -114,4 +140,4 @@ export default function Header() {
       </Container>
     </header>
   );
-} 
+}

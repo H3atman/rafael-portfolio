@@ -97,7 +97,7 @@ export default function ContactSection() {
           </h2>
           <Separator className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-6 text-lg text-muted-foreground max-w-[800px]">
-            Have a project in mind or want to discuss automation opportunities? I'd love to hear from you.
+            Have a project in mind or want to discuss automation opportunities? I&apos;d love to hear from you.
           </p>
         </div>
 
@@ -288,7 +288,7 @@ export default function ContactSection() {
             <div className="p-6 bg-muted/30 rounded-lg mt-8">
               <h4 className="font-medium mb-2">Availability</h4>
               <p className="text-muted-foreground mb-4">
-                I'm currently available for freelance projects, consulting, and full-time opportunities.
+                I&apos;m currently available for freelance projects, consulting, and full-time opportunities.
               </p>
               <Button asChild variant="outline" className="w-full">
                 <Link href={websiteConfig.resumeLink} target="_blank" rel="noopener noreferrer">

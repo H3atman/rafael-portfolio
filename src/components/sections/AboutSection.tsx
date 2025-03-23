@@ -2,6 +2,7 @@ import { websiteConfig } from "@/lib/data";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
+import Image from "next/image";
 
 export default function AboutSection() {
   return (
@@ -40,21 +41,21 @@ export default function AboutSection() {
                 
                 <Card>
                   <CardContent className="p-4 space-y-2">
-                    <div className="text-4xl font-bold text-primary">20+</div>
+                    <div className="text-4xl font-bold text-primary">10+</div>
                     <div className="text-sm font-medium">Automation Projects Completed</div>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardContent className="p-4 space-y-2">
-                    <div className="text-4xl font-bold text-primary">15k+</div>
+                    <div className="text-4xl font-bold text-primary">1000+</div>
                     <div className="text-sm font-medium">Hours Saved Through Automation</div>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardContent className="p-4 space-y-2">
-                    <div className="text-4xl font-bold text-primary">10+</div>
+                    <div className="text-4xl font-bold text-primary">6+</div>
                     <div className="text-sm font-medium">Automation Tools Mastered</div>
                   </CardContent>
                 </Card>
@@ -64,24 +65,16 @@ export default function AboutSection() {
           
           <div className="order-1 md:order-2 relative">
             <div className="aspect-square rounded-xl bg-gradient-to-tr from-primary/10 via-primary/5 to-background border border-border overflow-hidden relative">
-              {/* Profile image placeholder - replace with actual image */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="p-10 rounded-full bg-primary/10 border border-primary/20">
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    strokeWidth="1" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    className="w-full h-full text-primary/40"
-                  >
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
+              {/* Profile image */}
+              <div className="absolute inset-0 flex items-center justify-center p-16">
+                <div className="relative w-full h-full overflow-hidden rounded-lg border-4 border-primary/20">
+                  <Image 
+                    src="/profile_pic/picofme.png" 
+                    alt="Rafael Villanueva" 
+                    fill 
+                    className="object-cover object-center scale-80"
+                    priority
+                  />
                 </div>
               </div>
               
@@ -155,4 +148,4 @@ export default function AboutSection() {
       </Container>
     </section>
   );
-} 
+}
