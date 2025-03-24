@@ -26,7 +26,7 @@ const ToolsMarquee = () => {
     <section className="py-20 bg-black text-white">
       <Container>
         <h2 className="text-4xl font-bold tracking-tight text-center mb-10">
-          Powered by the industry's top tools
+          Leveraging modern automation & development tools
         </h2>
       </Container>
       
