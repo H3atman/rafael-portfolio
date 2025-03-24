@@ -4,7 +4,7 @@ export const websiteConfig = {
   email: "rafael@rvcodes.com",
   github: "https://github.com/H3atman",
   linkedin: "https://www.linkedin.com/in/villanueva-rafael/",
-  about: "As an Operations Manager at FirmOS Inc. with expertise in automation, I specialize in streamlining client communication processes and optimizing operational systems. I've enhanced email deliverability rates from 76% to 98% through implementing DMARC, SPF, and DKIM protocols, while creating custom automation with deeplink technology that reduced technical issues by 90%. With a background in data analysis at the Philippine National Police from 2019 to 2024, I combine technical skills in API integrations, Python, and JavaScript with strong communication and problem-solving abilities to deliver automation solutions that significantly reduce manual effort and improve operational reliability. I also have experience deploying containerized applications using Docker and deploying web applications using Vercel and Coolify.",
+  about: "As an Operations Manager and Automation Specialist, I create seamless client experiences through custom integrations, workflow automation, and data management. My expertise spans designing integrated systems between GoHighLevel, Airtable, and custom client portals that have reduced manual work by 85% and technical support tickets by 70%. I've engineered automated contract signing and billing systems that cut document processing time by 90% and launched a company-wide referral system that increased qualified leads by 45%. By implementing DMARC, SPF, and DKIM protocols, I've enhanced email deliverability rates from 76% to 98%. With a strong background in data analysis since 2019, I combine technical skills in API development, JavaScript, Next.js, and Python with AI-driven automation to deliver solutions that significantly improve operational efficiency and reliability for businesses.",
   resumeLink: "/resume/Rafael Villanueva - Resume.pdf",
 };
 
@@ -30,29 +30,29 @@ export const navigationLinks = [
 
 export const skillsData = {
   programmingLanguages: [
+    { name: "JavaScript/Next.js", level: 85 },
     { name: "Python", level: 90 },
-    { name: "JavaScript", level: 85 },
-    { name: "Web Development", level: 80 },
-    { name: "API Integrations", level: 85 },
-    { name: "Docker & Containers", level: 80 },
-    { name: "Microsoft 365", level: 80 },
+    { name: "HTML/CSS", level: 80 },
+    { name: "API Development", level: 90 },
+    { name: "Database Design", level: 80 },
+    { name: "ETL Processes", level: 85 },
   ],
   automationTools: [
-    { name: "Go High Level CRM", level: 90 },
-    { name: "Airtable", level: 85 },
+    { name: "GoHighLevel CRM", level: 95 },
+    { name: "Airtable", level: 95 },
+    { name: "Copilot Client Portal", level: 90 },
+    { name: "OpenAI, Claude & DeepSeek", level: 90 },
     { name: "Slack Integrations", level: 90 },
-    { name: "Google Workspace", level: 85 },
-    { name: "Power BI", level: 80 },
-    { name: "Email Protocols (DMARC/SPF/DKIM)", level: 90 },
-    { name: "Vercel & Coolify Deployment", level: 85 },
+    { name: "Email Deliverability (DMARC/SPF/DKIM)", level: 90 },
+    { name: "Workflow Design & Implementation", level: 95 },
   ],
   otherSkills: [
     { name: "Data Processing & Analysis", level: 90 },
-    { name: "Critical Thinking", level: 85 },
-    { name: "Problem-solving", level: 85 },
-    { name: "Communication", level: 90 },
-    { name: "Teamwork/Collaboration", level: 85 },
-    { name: "Containerization & Deployment", level: 80 },
+    { name: "Critical Thinking & Problem-solving", level: 90 },
+    { name: "Client Relationship Management", level: 85 },
+    { name: "Cross-functional Team Leadership", level: 85 },
+    { name: "Process Optimization & Redesign", level: 90 },
+    { name: "Integration & Workflow Design", level: 95 },
   ],
 };
 
@@ -60,14 +60,13 @@ export const experienceData = [
   {
     company: "FirmOS Inc.",
     position: "Operations Manager",
-    duration: "Nov 2024 - March 2025",
+    duration: "Nov 2024 - Mar 2025",
     description: [
-      "Streamlined client communication processes by enhancing email deliverability rates from 76% to 98% through implementation of DMARC, SPF, and DKIM protocols",
-      "Optimized client meeting systems by creating custom automation with deeplink technology, reducing technical issues by 90%",
-      "Eliminated operational overhead for support staff through effective automation implementations",
-      "Implemented containerized deployment using Docker and Coolify, improving application stability and reducing deployment time by 70%",
-      "Established CI/CD pipelines with Vercel for web applications, enabling rapid iterations and seamless deployment of frontend applications",
-      "Improved operational reliability and client satisfaction through technical optimizations"
+      "Managed comprehensive email workflow ecosystem including pre-calls, post-calls, and marketing campaigns, ensuring consistent communication and reducing client follow-up issues by 65%",
+      "Designed and implemented integration between GoHighLevel appointment bookings and Airtable, creating automated workflows for client onboarding, no-show handling, and call progression that reduced manual intervention by 85%",
+      "Developed a custom client portal allowing clients to join prospect calls under their branded domain, increasing client brand consistency and reducing technical support tickets by 70%",
+      "Launched and architected a company-wide referral system using GoHighLevel integrated with Airtable, resulting in a 45% increase in qualified leads and 30% reduction in customer acquisition costs",
+      "Streamlined client communication processes by enhancing email deliverability rates from 76% to 98% through implementation of DMARC, SPF, and DKIM protocols, resulting in improved operational reliability and client satisfaction"
     ],
   },
   {
@@ -75,22 +74,21 @@ export const experienceData = [
     position: "Automation Specialist / Product Owner",
     duration: "Sep 2024 - Nov 2024",
     description: [
-      "Implemented automation connecting Go High Level CRM to Airtable, streamlining contact and appointment management",
-      "Reduced manual data entry by 75% through efficient integration solutions",
-      "Developed Slack-Airtable integration for Start of Day (SOD) and End of Day (EOD) reporting workflows",
-      "Increased team accountability and improved documentation compliance by 40%"
+      "Created a comprehensive team KPI dashboard by integrating Airtable with custom visualization tools, providing real-time performance insights and improving team productivity by 35%",
+      "Implemented automation connecting Go High Level CRM to Airtable, streamlining contact and appointment management while reducing manual data entry by 75%",
+      "Developed Slack-Airtable integration for Start of Day (SOD) and End of Day (EOD) reporting workflows, increasing team accountability and improving documentation compliance by 40%",
+      "Led development team in creating the critical client journey path, implementing a custom integration with Copilot client portal using Next.js and Copilot's SDK",
+      "Engineered automated contract signing, invoice generation, and billing systems through Copilot's API, reducing document processing time by 90% and eliminating billing errors"
     ],
   },
   {
     company: "Philippine National Police",
     position: "Data Controller I",
-    duration: "Oct 2022 - Sep 2024",
+    duration: "Oct 2022 - Present",
     description: [
-      "Effectively stored and secured all outgoing and incoming documents creating physical and digital copies",
-      "Designed interactive PowerBI dashboards to visualize complex data sets, providing actionable insights",
-      "Increased decision-making efficiency by 80% through data visualization improvements",
-      "Prepared and processed large databases, implementing automated systems for data categorization and advanced filtering",
-      "Reduced manual effort by 90% through automation of data processing tasks"
+      "Designed interactive PowerBI dashboards to visualize complex data sets, providing actionable insights to stakeholders and increasing decision-making efficiency by 80%",
+      "Prepared and processed a large database of data, implementing automated systems for data categorization and advanced filtering, resulting in a 90% reduction in manual effort",
+      "Streamlined document management processes by implementing digital storage systems for all incoming and outgoing documents, ensuring data security and accessibility"
     ],
   },
   {
@@ -98,10 +96,9 @@ export const experienceData = [
     position: "Statistician Aide",
     duration: "Mar 2019 - Oct 2022",
     description: [
-      "Conducted comprehensive data analysis on crime rates in target neighborhoods, identifying key trends and patterns",
-      "Aided in the development of targeted intervention strategies, resulting in a 5% decrease in overall crime rates per year",
-      "Collaborated with cross-functional teams to develop and deliver informative presentations on crime statistics",
-      "Educated local law enforcement officers on emerging crime trends and provided actionable insights for improved response strategies"
+      "Conducted comprehensive data analysis on crime rates in target neighborhoods, identifying key trends and patterns that contributed to a 5% decrease in overall crime rates per year",
+      "Collaborated with cross-functional teams to develop and deliver informative presentations on crime statistics, providing actionable insights for improved response strategies",
+      "Implemented data processing automation that significantly reduced manual effort in generating standardized reports for law enforcement agencies"
     ],
   },
 ];

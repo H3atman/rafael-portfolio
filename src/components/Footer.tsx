@@ -15,7 +15,7 @@ export default function Footer() {
               {websiteConfig.name}
             </Link>
             <p className="mt-4 text-muted-foreground max-w-md">
-              Operations Manager & Automation Specialist with expertise in streamlining processes, enhancing communication systems, and implementing efficient workflow solutions.
+              Operations Manager & Automation Specialist with expertise in AI-powered solutions, system integration, and seamless workflow automation that drives business efficiency and enhances client experiences.
             </p>
             <div className="flex space-x-4 mt-6">
               <a 
@@ -106,14 +106,14 @@ export default function Footer() {
           </div>
           
           <div>
-            <h3 className="text-lg font-medium mb-4">Expertise</h3>
+            <h3 className="text-lg font-medium mb-4">AI & Automation Expertise</h3>
             <ul className="space-y-2">
               <li>
                 <Link 
                   href="#skills" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Email Protocols (DMARC/SPF/DKIM)
+                  AI Automation Solutions
                 </Link>
               </li>
               <li>
@@ -121,7 +121,7 @@ export default function Footer() {
                   href="#skills" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Workflow Automation
+                  GoHighLevel + Airtable Integration
                 </Link>
               </li>
               <li>
@@ -129,7 +129,7 @@ export default function Footer() {
                   href="#skills" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  API Integrations
+                  Custom Client Portals
                 </Link>
               </li>
               <li>
@@ -137,7 +137,7 @@ export default function Footer() {
                   href="#skills" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Data Processing & Analysis
+                  Email Optimization (DMARC/SPF/DKIM)
                 </Link>
               </li>
               <li>
@@ -145,7 +145,7 @@ export default function Footer() {
                   href="#skills" 
                   className="text-muted-foreground hover:text-foreground transition-colors"
                 >
-                  Custom Automation Solutions
+                  Business Process Transformation
                 </Link>
               </li>
             </ul>
@@ -156,7 +156,7 @@ export default function Footer() {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} {websiteConfig.name} | Operations Manager & Automation Specialist
+            &copy; {currentYear} {websiteConfig.name} | AI Automation & Integration Specialist
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link 

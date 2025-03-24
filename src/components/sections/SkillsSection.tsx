@@ -77,15 +77,15 @@ export default function SkillsSection() {
           </h2>
           <Separator className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-6 text-lg text-muted-foreground max-w-[800px]">
-            My expertise in operations management and automation technologies allows me to create efficient, scalable solutions that drive operational excellence.
+            My expertise in AI-powered automation and system integration enables me to create intelligent, scalable solutions that transform business operations and drive exceptional client experiences.
           </p>
         </div>
 
         <Tabs defaultValue="programming" className="w-full max-w-4xl mx-auto" onValueChange={handleTabChange}>
           <TabsList className="grid grid-cols-3 mb-8">
             <TabsTrigger value="programming">Technical Skills</TabsTrigger>
-            <TabsTrigger value="automation">Automation Tools</TabsTrigger>
-            <TabsTrigger value="other">Other Skills</TabsTrigger>
+            <TabsTrigger value="automation">AI & Automation</TabsTrigger>
+            <TabsTrigger value="other">Business Skills</TabsTrigger>
           </TabsList>
           
           <TabsContent value="programming" className="space-y-8">
@@ -107,16 +107,16 @@ export default function SkillsSection() {
             </div>
             
             <div className="pt-6">
-              <h3 className="text-lg font-medium mb-4">Technical Applications</h3>
+              <h3 className="text-lg font-medium mb-4">Technical Skills</h3>
               <div className="flex flex-wrap gap-3">
-                <Badge className="px-3 py-1">API Integrations</Badge>
-                <Badge className="px-3 py-1">Data Processing</Badge>
-                <Badge className="px-3 py-1">Web Development</Badge>
-                <Badge className="px-3 py-1">Microsoft 365</Badge>
-                <Badge className="px-3 py-1">Python</Badge>
+                <Badge className="px-3 py-1">API Development</Badge>
+                <Badge className="px-3 py-1">Workflow Design</Badge>
+                <Badge className="px-3 py-1">ETL Processes</Badge>
                 <Badge className="px-3 py-1">JavaScript</Badge>
-                <Badge className="px-3 py-1">Docker</Badge>
-                <Badge className="px-3 py-1">Containerization</Badge>
+                <Badge className="px-3 py-1">Next.js</Badge>
+                <Badge className="px-3 py-1">Python</Badge>
+                <Badge className="px-3 py-1">HTML/CSS</Badge>
+                <Badge className="px-3 py-1">Database Design</Badge>
               </div>
             </div>
           </TabsContent>
@@ -140,16 +140,16 @@ export default function SkillsSection() {
             </div>
             
             <div className="pt-6">
-              <h3 className="text-lg font-medium mb-4">Automation Specialties</h3>
+              <h3 className="text-lg font-medium mb-4">Software & Platforms</h3>
               <div className="flex flex-wrap gap-3">
-                <Badge className="px-3 py-1">Email Deliverability</Badge>
-                <Badge className="px-3 py-1">Workflow Automation</Badge>
-                <Badge className="px-3 py-1">DMARC/SPF/DKIM</Badge>
-                <Badge className="px-3 py-1">Business Process Automation</Badge>
-                <Badge className="px-3 py-1">CRM Integration</Badge>
-                <Badge className="px-3 py-1">Slack-Airtable Integration</Badge>
-                <Badge className="px-3 py-1">Vercel Deployment</Badge>
-                <Badge className="px-3 py-1">Coolify Deployment</Badge>
+                <Badge className="px-3 py-1">GoHighLevel CRM</Badge>
+                <Badge className="px-3 py-1">Copilot Client Portal</Badge>
+                <Badge className="px-3 py-1">Airtable</Badge>
+                <Badge className="px-3 py-1">OpenAI & Claude</Badge>
+                <Badge className="px-3 py-1">Email Marketing Systems</Badge>
+                <Badge className="px-3 py-1">Slack</Badge>
+                <Badge className="px-3 py-1">Microsoft 365</Badge>
+                <Badge className="px-3 py-1">Google Workspace</Badge>
               </div>
             </div>
           </TabsContent>
@@ -173,21 +173,21 @@ export default function SkillsSection() {
             </div>
             
             <div className="pt-6">
-              <h3 className="text-lg font-medium mb-4">Professional Strengths</h3>
+              <h3 className="text-lg font-medium mb-4">Soft Skills</h3>
               <div className="flex flex-wrap gap-3">
                 <Badge className="px-3 py-1">Critical Thinking</Badge>
-                <Badge className="px-3 py-1">Communication</Badge>
-                <Badge className="px-3 py-1">Problem Solving</Badge>
-                <Badge className="px-3 py-1">Adaptability</Badge>
-                <Badge className="px-3 py-1">Teamwork/Collaboration</Badge>
+                <Badge className="px-3 py-1">Problem-solving</Badge>
+                <Badge className="px-3 py-1">Client Relationship Management</Badge>
+                <Badge className="px-3 py-1">Cross-functional Team Leadership</Badge>
                 <Badge className="px-3 py-1">Process Optimization</Badge>
+                <Badge className="px-3 py-1">Redesign</Badge>
               </div>
             </div>
           </TabsContent>
         </Tabs>
         
         <div className="mt-16 p-6 bg-muted/30 rounded-lg border border-border max-w-4xl mx-auto">
-          <h3 className="text-xl font-medium mb-4">My Professional Philosophy</h3>
+          <h3 className="text-xl font-medium mb-4">My AI Automation Philosophy</h3>
           <div className="grid sm:grid-cols-3 gap-6">
             <div className="space-y-2">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
@@ -213,8 +213,8 @@ export default function SkillsSection() {
                   <path d="m16.24 7.76 2.83-2.83" />
                 </svg>
               </div>
-              <h4 className="font-medium">Optimize Operations</h4>
-              <p className="text-sm text-muted-foreground">Before automating, I focus on optimizing the process to ensure maximum efficiency with minimal complexity.</p>
+              <h4 className="font-medium">AI-Enhanced Processes</h4>
+              <p className="text-sm text-muted-foreground">I strategically integrate AI to enhance existing workflows, focusing first on optimizing the process to ensure maximum efficiency with minimal complexity.</p>
             </div>
             
             <div className="space-y-2">
@@ -236,8 +236,8 @@ export default function SkillsSection() {
                   <path d="M12 8v8" />
                 </svg>
               </div>
-              <h4 className="font-medium">Data-Driven Solutions</h4>
-              <p className="text-sm text-muted-foreground">I leverage data analysis to inform decisions and create tailored automation solutions that address specific operational challenges.</p>
+              <h4 className="font-medium">Intelligent Integration</h4>
+              <p className="text-sm text-muted-foreground">I create seamless connections between business systems like CRMs, Airtable, and AI tools to enable data flow that powers intelligent business decisions and automation.</p>
             </div>
             
             <div className="space-y-2">
@@ -258,8 +258,8 @@ export default function SkillsSection() {
                   <path d="M10 2c1 .5 2 2 2 5" />
                 </svg>
               </div>
-              <h4 className="font-medium">Client Satisfaction</h4>
-              <p className="text-sm text-muted-foreground">I prioritize client communication and reliability, creating solutions that enhance user experience while reducing technical issues.</p>
+              <h4 className="font-medium">Human-Centered Design</h4>
+              <p className="text-sm text-muted-foreground">I design AI-powered solutions with a focus on the human experience, ensuring systems are intuitive, reliable, and enhance rather than replace human capabilities.</p>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ export default function AboutSection() {
           </h2>
           <Separator className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-6 text-lg text-muted-foreground max-w-[800px]">
-            Get to know my journey and what drives my passion for automation.
+            Get to know my journey and what drives my passion for AI-powered automation and business integration.
           </p>
         </div>
 
@@ -24,39 +24,39 @@ export default function AboutSection() {
               <p className="text-lg">{websiteConfig.about}</p>
               
               <p className="text-lg">
-                With a strong background in both software development and operations, I bridge the gap between development and IT teams to create seamless, automated workflows that drive efficiency and reduce costs.
+                With a strong background in both software development and operations management, I specialize in leveraging AI technologies to bridge the gap between business objectives and technical implementation. I create seamless, intelligent workflows that drive efficiency, enhance client experiences, and reduce operational costs.
               </p>
               
               <p className="text-lg">
-                My goal is simple: to help businesses leverage automation to focus on what truly matters—innovation and growth.
+                My goal is to help businesses harness the power of AI-driven automation and system integration to eliminate repetitive tasks, streamline complex processes, and unlock new opportunities for innovation and growth.
               </p>
               
               <div className="grid grid-cols-2 gap-4 mt-8">
                 <Card>
                   <CardContent className="p-4 space-y-2">
-                    <div className="text-4xl font-bold text-primary">5+</div>
+                    <div className="text-4xl font-bold text-primary">6+</div>
                     <div className="text-sm font-medium">Years of Automation Experience</div>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardContent className="p-4 space-y-2">
-                    <div className="text-4xl font-bold text-primary">10+</div>
-                    <div className="text-sm font-medium">Automation Projects Completed</div>
+                    <div className="text-4xl font-bold text-primary">15+</div>
+                    <div className="text-sm font-medium">AI & Automation Projects Completed</div>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardContent className="p-4 space-y-2">
-                    <div className="text-4xl font-bold text-primary">1000+</div>
-                    <div className="text-sm font-medium">Hours Saved Through Automation</div>
+                    <div className="text-4xl font-bold text-primary">2000+</div>
+                    <div className="text-sm font-medium">Hours Saved Through AI Automation</div>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardContent className="p-4 space-y-2">
-                    <div className="text-4xl font-bold text-primary">6+</div>
-                    <div className="text-sm font-medium">Automation Tools Mastered</div>
+                    <div className="text-4xl font-bold text-primary">8+</div>
+                    <div className="text-sm font-medium">AI & Automation Tools Mastered</div>
                   </CardContent>
                 </Card>
               </div>
@@ -109,7 +109,7 @@ export default function AboutSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm font-medium">Process Automation</div>
+                    <div className="text-sm font-medium">AI Automation</div>
                     <div className="text-xs text-muted-foreground">Expert Level</div>
                   </div>
                 </div>
@@ -137,8 +137,8 @@ export default function AboutSection() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-sm font-medium">Code Automation</div>
-                    <div className="text-xs text-muted-foreground">Advanced Level</div>
+                    <div className="text-sm font-medium">System Integration</div>
+                    <div className="text-xs text-muted-foreground">Expert Level</div>
                   </div>
                 </div>
               </CardContent>

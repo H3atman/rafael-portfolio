@@ -19,7 +19,7 @@ export default function ExperienceSection() {
           </h2>
           <Separator className="w-20 h-1 bg-primary rounded-full" />
           <p className="mt-6 text-lg text-muted-foreground max-w-[800px]">
-            My professional journey in automation and development.
+            My professional journey in AI-powered automation and business system integration.
           </p>
         </div>
 
@@ -109,26 +109,26 @@ export default function ExperienceSection() {
         <div className="mt-20 max-w-3xl mx-auto">
           <Card className="bg-gradient-to-br from-primary/5 to-background border-primary/20">
             <CardContent className="p-6">
-              <h3 className="text-xl font-medium mb-4">Automation Impact Highlights</h3>
+              <h3 className="text-xl font-medium mb-4">AI Automation Impact Highlights</h3>
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-medium mb-2">Before Automation</h4>
+                  <h4 className="font-medium mb-2">Before AI Automation</h4>
                   <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
                     <li>Manual data entry across multiple systems</li>
                     <li>Time-consuming client onboarding processes</li>
-                    <li>Inefficient Excel-based reporting workflows</li>
+                    <li>Inefficient document processing workflows</li>
                     <li>Disconnected business systems and data silos</li>
-                    <li>Repetitive data processing tasks</li>
+                    <li>Limited analytics capabilities and insights</li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-medium mb-2">After Automation</h4>
+                  <h4 className="font-medium mb-2">After AI Automation</h4>
                   <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-                    <li>Seamless data flow between systems via APIs</li>
-                    <li>Streamlined client journeys with Go High Level</li>
-                    <li>Automated reporting with Excel VBA and Python</li>
-                    <li>Integrated workflows with Zapier and Make</li>
-                    <li>Efficient data processing with Pandas/Polars</li>
+                    <li>Intelligent data flow between systems via APIs</li>
+                    <li>Streamlined client journeys with GoHighLevel + Airtable</li>
+                    <li>Automated document processing with AI-enhanced tools</li>
+                    <li>Integrated workflows with custom AI implementations</li>
+                    <li>Real-time business insights through data visualization</li>
                   </ul>
                 </div>
               </div>
@@ -138,4 +138,4 @@ export default function ExperienceSection() {
       </Container>
     </section>
   );
-} 
+}
