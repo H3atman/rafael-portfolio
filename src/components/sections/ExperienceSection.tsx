@@ -106,29 +106,51 @@ export default function ExperienceSection() {
           </div>
         </div>
 
-        <div className="mt-20 max-w-3xl mx-auto">
-          <Card className="bg-gradient-to-br from-primary/5 to-background border-primary/20">
-            <CardContent className="p-6">
-              <h3 className="text-xl font-medium mb-4">AI Automation Impact Highlights</h3>
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-medium mb-2">Before AI Automation</h4>
-                  <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-                    <li>Manual data entry across multiple systems</li>
-                    <li>Time-consuming client onboarding processes</li>
-                    <li>Inefficient document processing workflows</li>
-                    <li>Disconnected business systems and data silos</li>
-                    <li>Limited analytics capabilities and insights</li>
+        <div className="mt-20 max-w-4xl mx-auto">
+          <Card className="bg-gradient-to-br from-primary/5 to-background border-primary/20 overflow-hidden">
+            <CardContent className="p-0">
+              <div className="p-6 border-b border-border/40">
+                <h3 className="text-2xl font-semibold text-center">AI Automation Impact Highlights</h3>
+              </div>
+              <div className="grid md:grid-cols-2 gap-0">
+                <div className="p-6 md:border-r border-border/40">
+                  <h4 className="font-medium text-lg mb-4 flex items-center text-foreground/90">
+                    <span className="inline-block w-3 h-3 bg-red-400 rounded-full mr-2"></span>
+                    Before AI Automation
+                  </h4>
+                  <ul className="space-y-3">
+                    {[
+                      "Manual data entry across multiple systems",
+                      "Time-consuming client onboarding processes",
+                      "Inefficient document processing workflows",
+                      "Disconnected business systems and data silos",
+                      "Limited analytics capabilities and insights"
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start gap-2 text-muted-foreground">
+                        <span className="mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
-                <div>
-                  <h4 className="font-medium mb-2">After AI Automation</h4>
-                  <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
-                    <li>Intelligent data flow between systems via APIs</li>
-                    <li>Streamlined client journeys with GoHighLevel + Airtable</li>
-                    <li>Automated document processing with AI-enhanced tools</li>
-                    <li>Integrated workflows with custom AI implementations</li>
-                    <li>Real-time business insights through data visualization</li>
+                <div className="p-6 bg-primary/5">
+                  <h4 className="font-medium text-lg mb-4 flex items-center text-foreground/90">
+                    <span className="inline-block w-3 h-3 bg-green-400 rounded-full mr-2"></span>
+                    After AI Automation
+                  </h4>
+                  <ul className="space-y-3">
+                    {[
+                      "Intelligent data flow between systems via APIs",
+                      "Streamlined client journeys with GoHighLevel + Airtable",
+                      "Automated document processing with AI-enhanced tools",
+                      "Integrated workflows with custom AI implementations",
+                      "Real-time business insights through data visualization"
+                    ].map((item, index) => (
+                      <li key={index} className="flex items-start gap-2 text-muted-foreground">
+                        <span className="mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
