@@ -11,7 +11,7 @@ interface CalendlyProps {
 const Calendly: React.FC<CalendlyProps> = ({
   url = "https://calendly.com/rafael-rvcodes/30min?hide_gdpr_banner=1",
   styles = {
-    minWidth: "500px",
+    width: "100%",
     height: "700px",
   },
 }) => {
@@ -35,11 +35,11 @@ const Calendly: React.FC<CalendlyProps> = ({
 
   return (
     <div 
-      className="calendly-inline-widget rounded-lg shadow-lg" 
+      className="calendly-inline-widget rounded-lg shadow-lg w-full" 
       data-url={calendlyUrl.toString()}
       style={styles}
     />
   );
 };
 
-export default Calendly; 
+export default Calendly;

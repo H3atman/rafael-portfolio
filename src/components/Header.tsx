@@ -69,9 +69,9 @@ export default function Header() {
           <Image 
             src="/brand_guidelines/logo.png" 
             alt="RV Logo" 
-            width={40} 
-            height={40} 
-            className="h-auto w-auto"
+            width={48} 
+            height={48} 
+            className="h-auto w-auto dark:invert"
             priority
           />
         </Link>

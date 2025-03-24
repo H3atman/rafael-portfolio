@@ -108,6 +108,18 @@ export const experienceData = [
 
 export const projectsData: Project[] = [
   {
+    title: "KP Cases Management System",
+    description: "A comprehensive case management system developed for law enforcement, featuring user authentication, case encoding, and advanced search capabilities. Built with modern web technologies and secure authentication practices.",
+    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Supabase","Tailwind CSS", "Authentication", "shadcn/ui"],
+    image: "/projects/kp-cases-login.png",
+    images: [
+      "/projects/kp-cases-login.png",
+      "/projects/kp-cases-encoding.png"
+    ],
+    link: "https://kp-cases-v2.vercel.app/",
+    github: "https://github.com/H3atman/kp-cases-v2",
+  },
+  {
     title: "MikroTik PPPoE Manager",
     description: "A Next.js web application for managing MikroTik router PPPoE users with features for batch updates, expiration management, and secure remote access to my local network via Cloudflare Tunnel. Deployed using Docker containers for reliable operation and Vercel for web hosting, enabling safe administration from anywhere.",
     technologies: ["Next.js", "React", "MikroTik API", "Cloudflare Tunnel", "Docker", "Vercel", "shadcn/ui", "Tailwind CSS"],
@@ -126,46 +138,6 @@ export const projectsData: Project[] = [
     technologies: ["Next.js", "React", "API Integration", "Responsive Design"],
     image: "/projects/crime_stat_webapp.png",
     link: "https://crime-stat-webapp-demo.vercel.app/",
-    github: "#",
-  },
-  {
-    title: "Client Onboarding Automation",
-    description: "A comprehensive automation system using Go High Level API and Workflows that streamlines the entire client onboarding process, reducing manual steps by 90% and improving client satisfaction.",
-    technologies: ["Go High Level API", "Zapier", "Airtable", "Python", "FastAPI"],
-    image: "/projects/deployment-automation.jpg",
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Data Processing Pipeline",
-    description: "An automated system that processes and transforms large datasets using Python (Pandas/Polars) and connects with various APIs to generate actionable business insights.",
-    technologies: ["Python", "Pandas", "Polars", "FastAPI", "Streamlit"],
-    image: "/projects/monitoring-system.jpg",
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Business Workflow Automation",
-    description: "End-to-end workflow automation using Make and Zapier that connects multiple business systems, eliminating manual data entry and ensuring data consistency across platforms.",
-    technologies: ["Make", "Zapier", "Airtable", "REST APIs", "Go High Level"],
-    image: "/projects/test-automation.jpg",
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Containerized Application Deployment",
-    description: "Developed a streamlined application deployment system using Docker containers and Coolify, enabling quick setup and scaling of web applications and microservices with automated deployment pipelines.",
-    technologies: ["Docker", "Coolify", "CI/CD", "Next.js", "Node.js", "GitHub Actions"],
-    image: "/projects/docker-deployment.jpg",
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Email Deliverability System",
-    description: "Implemented DMARC, SPF, and DKIM protocols to enhance email deliverability rates from 76% to 98%, improving operational reliability and client satisfaction.",
-    technologies: ["DMARC", "SPF", "DKIM", "Email Protocols", "Client Communication"],
-    image: "/projects/workflow-automation.jpg",
-    link: "#",
     github: "#",
   },
 ];
