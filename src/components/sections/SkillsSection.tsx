@@ -115,6 +115,8 @@ export default function SkillsSection() {
                 <Badge className="px-3 py-1">Microsoft 365</Badge>
                 <Badge className="px-3 py-1">Python</Badge>
                 <Badge className="px-3 py-1">JavaScript</Badge>
+                <Badge className="px-3 py-1">Docker</Badge>
+                <Badge className="px-3 py-1">Containerization</Badge>
               </div>
             </div>
           </TabsContent>
@@ -146,6 +148,8 @@ export default function SkillsSection() {
                 <Badge className="px-3 py-1">Business Process Automation</Badge>
                 <Badge className="px-3 py-1">CRM Integration</Badge>
                 <Badge className="px-3 py-1">Slack-Airtable Integration</Badge>
+                <Badge className="px-3 py-1">Vercel Deployment</Badge>
+                <Badge className="px-3 py-1">Coolify Deployment</Badge>
               </div>
             </div>
           </TabsContent>

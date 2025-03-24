@@ -4,9 +4,20 @@ export const websiteConfig = {
   email: "rafael@rvcodes.com",
   github: "https://github.com/H3atman",
   linkedin: "https://www.linkedin.com/in/villanueva-rafael/",
-  about: "As an Operations Manager at FirmOS Inc. with expertise in automation, I specialize in streamlining client communication processes and optimizing operational systems. I've enhanced email deliverability rates from 76% to 98% through implementing DMARC, SPF, and DKIM protocols, while creating custom automation with deeplink technology that reduced technical issues by 90%. With a background in data analysis at the Philippine National Police from 2019 to 2024, I combine technical skills in API integrations, Python, and JavaScript with strong communication and problem-solving abilities to deliver automation solutions that significantly reduce manual effort and improve operational reliability.",
+  about: "As an Operations Manager at FirmOS Inc. with expertise in automation, I specialize in streamlining client communication processes and optimizing operational systems. I've enhanced email deliverability rates from 76% to 98% through implementing DMARC, SPF, and DKIM protocols, while creating custom automation with deeplink technology that reduced technical issues by 90%. With a background in data analysis at the Philippine National Police from 2019 to 2024, I combine technical skills in API integrations, Python, and JavaScript with strong communication and problem-solving abilities to deliver automation solutions that significantly reduce manual effort and improve operational reliability. I also have experience deploying containerized applications using Docker and deploying web applications using Vercel and Coolify.",
   resumeLink: "/resume/Rafael Villanueva - Resume.pdf",
 };
+
+// Add Project interface to better type our data
+export interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  image: string;
+  images?: string[]; // Optional array for multiple screenshots
+  link: string;
+  github: string;
+}
 
 export const navigationLinks = [
   { name: "Home", href: "#home" },
@@ -23,6 +34,7 @@ export const skillsData = {
     { name: "JavaScript", level: 85 },
     { name: "Web Development", level: 80 },
     { name: "API Integrations", level: 85 },
+    { name: "Docker & Containers", level: 80 },
     { name: "Microsoft 365", level: 80 },
   ],
   automationTools: [
@@ -32,6 +44,7 @@ export const skillsData = {
     { name: "Google Workspace", level: 85 },
     { name: "Power BI", level: 80 },
     { name: "Email Protocols (DMARC/SPF/DKIM)", level: 90 },
+    { name: "Vercel & Coolify Deployment", level: 85 },
   ],
   otherSkills: [
     { name: "Data Processing & Analysis", level: 90 },
@@ -39,6 +52,7 @@ export const skillsData = {
     { name: "Problem-solving", level: 85 },
     { name: "Communication", level: 90 },
     { name: "Teamwork/Collaboration", level: 85 },
+    { name: "Containerization & Deployment", level: 80 },
   ],
 };
 
@@ -51,6 +65,8 @@ export const experienceData = [
       "Streamlined client communication processes by enhancing email deliverability rates from 76% to 98% through implementation of DMARC, SPF, and DKIM protocols",
       "Optimized client meeting systems by creating custom automation with deeplink technology, reducing technical issues by 90%",
       "Eliminated operational overhead for support staff through effective automation implementations",
+      "Implemented containerized deployment using Docker and Coolify, improving application stability and reducing deployment time by 70%",
+      "Established CI/CD pipelines with Vercel for web applications, enabling rapid iterations and seamless deployment of frontend applications",
       "Improved operational reliability and client satisfaction through technical optimizations"
     ],
   },
@@ -90,7 +106,20 @@ export const experienceData = [
   },
 ];
 
-export const projectsData = [
+export const projectsData: Project[] = [
+  {
+    title: "MikroTik PPPoE Manager",
+    description: "A Next.js web application for managing MikroTik router PPPoE users with features for batch updates, expiration management, and secure remote access to my local network via Cloudflare Tunnel. Deployed using Docker containers for reliable operation and Vercel for web hosting, enabling safe administration from anywhere.",
+    technologies: ["Next.js", "React", "MikroTik API", "Cloudflare Tunnel", "Docker", "Vercel", "shadcn/ui", "Tailwind CSS"],
+    image: "/projects/mikrotik-manager-login.jpg",
+    images: [
+      "/projects/mikrotik-manager-login.jpg",
+      "/projects/mikrotik-manager-main.jpg"
+      
+    ],
+    link: "https://github.com/H3atman/mikrotik-manager",
+    github: "https://rg-networks.vercel.app/",
+  },
   {
     title: "Automated Crime Processing Engine",
     description: "Transform raw CIRAS v2 data into standardized reports with automatic OFFENSE CATEGORY classification and Focus Crimes standardization - eliminating hours of manual Excel processing",
@@ -120,6 +149,14 @@ export const projectsData = [
     description: "End-to-end workflow automation using Make and Zapier that connects multiple business systems, eliminating manual data entry and ensuring data consistency across platforms.",
     technologies: ["Make", "Zapier", "Airtable", "REST APIs", "Go High Level"],
     image: "/projects/test-automation.jpg",
+    link: "#",
+    github: "#",
+  },
+  {
+    title: "Containerized Application Deployment",
+    description: "Developed a streamlined application deployment system using Docker containers and Coolify, enabling quick setup and scaling of web applications and microservices with automated deployment pipelines.",
+    technologies: ["Docker", "Coolify", "CI/CD", "Next.js", "Node.js", "GitHub Actions"],
+    image: "/projects/docker-deployment.jpg",
     link: "#",
     github: "#",
   },

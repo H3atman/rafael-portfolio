@@ -1,7 +1,7 @@
 "use client";
 
 import { Separator } from "@/components/ui/separator";
-import { projectsData } from "@/lib/data";
+import { projectsData, Project } from "@/lib/data";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -18,20 +18,46 @@ import { Container } from "@/components/ui/container";
 import { memo } from "react";
 
 // Memoized project card to prevent unnecessary re-renders
-const ProjectCard = memo(({ project, index }: { project: typeof projectsData[0], index: number }) => (
+const ProjectCard = memo(({ project, index }: { project: Project, index: number }) => (
   <Card key={index} className="flex flex-col h-full overflow-hidden group">
-    <div className="relative h-48 overflow-hidden bg-muted">
-      {/* Project image with loading priority only for the first project */}
-      <Image 
-        src={project.image}
-        alt={project.title}
-        fill
-        className="object-cover transition-transform duration-300 group-hover:scale-105"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        loading={index < 2 ? "eager" : "lazy"} 
-        priority={index === 0}
-      />
-    </div>
+    {project.images && project.images.length > 1 ? (
+      <div className="h-48 overflow-hidden bg-muted">
+        <Carousel className="w-full">
+          <CarouselContent>
+            {project.images.map((image, imgIndex) => (
+              <CarouselItem key={imgIndex}>
+                <div className="relative h-48 overflow-hidden">
+                  <Image 
+                    src={image}
+                    alt={`${project.title} screenshot ${imgIndex + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading={index < 2 && imgIndex === 0 ? "eager" : "lazy"} 
+                    priority={index === 0 && imgIndex === 0}
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-1 size-6" />
+          <CarouselNext className="right-1 size-6" />
+        </Carousel>
+      </div>
+    ) : (
+      <div className="relative h-48 overflow-hidden bg-muted">
+        {/* Project image with loading priority only for the first project */}
+        <Image 
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loading={index < 2 ? "eager" : "lazy"} 
+          priority={index === 0}
+        />
+      </div>
+    )}
     <CardHeader className="flex-1">
       <CardTitle>{project.title}</CardTitle>
       <CardDescription className="line-clamp-2 h-10">{project.description}</CardDescription>
@@ -98,20 +124,46 @@ const ProjectCard = memo(({ project, index }: { project: typeof projectsData[0],
 ProjectCard.displayName = 'ProjectCard';
 
 // Memoized mobile project card
-const MobileProjectCard = memo(({ project, index }: { project: typeof projectsData[0], index: number }) => (
+const MobileProjectCard = memo(({ project, index }: { project: Project, index: number }) => (
   <Card className="h-full">
-    <div className="relative h-40 overflow-hidden bg-muted">
-      {/* Project image */}
-      <Image 
-        src={project.image}
-        alt={project.title}
-        fill
-        className="object-cover"
-        sizes="(max-width: 768px) 100vw"
-        loading={index === 0 ? "eager" : "lazy"}
-        priority={index === 0}
-      />
-    </div>
+    {project.images && project.images.length > 1 ? (
+      <div className="h-40 overflow-hidden bg-muted">
+        <Carousel className="w-full">
+          <CarouselContent>
+            {project.images.map((image, imgIndex) => (
+              <CarouselItem key={imgIndex}>
+                <div className="relative h-40 overflow-hidden">
+                  <Image 
+                    src={image}
+                    alt={`${project.title} screenshot ${imgIndex + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw"
+                    loading={index === 0 && imgIndex === 0 ? "eager" : "lazy"}
+                    priority={index === 0 && imgIndex === 0}
+                  />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-1 size-6" />
+          <CarouselNext className="right-1 size-6" />
+        </Carousel>
+      </div>
+    ) : (
+      <div className="relative h-40 overflow-hidden bg-muted">
+        {/* Project image */}
+        <Image 
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw"
+          loading={index === 0 ? "eager" : "lazy"}
+          priority={index === 0}
+        />
+      </div>
+    )}
     <CardHeader>
       <CardTitle>{project.title}</CardTitle>
       <CardDescription className="line-clamp-3">
@@ -201,4 +253,4 @@ export default function ProjectsSection() {
       </Container>
     </section>
   );
-} 
+}
