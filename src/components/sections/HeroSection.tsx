@@ -51,9 +51,9 @@ export default function HeroSection() {
       <Container className="grid gap-8 lg:grid-cols-2 items-center">
         <div className="space-y-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-            Transforming Businesses Through{" "}
+            Driving Operational Excellence Through{" "}
             <span className="relative">
-              <span className="text-primary">Automation</span>
+              <span className="text-primary">Strategic Automation</span>
               <span className="absolute -bottom-2 left-0 h-1 w-full bg-primary rounded-full"></span>
             </span>
           </h2>
@@ -68,24 +68,24 @@ export default function HeroSection() {
               </HoverCardTrigger>
               <HoverCardContent className="w-80">
                 <div className="space-y-2">
-                  <h4 className="text-sm font-semibold">What does an Automation Specialist do?</h4>
+                  <h4 className="text-sm font-semibold">What does an Operations Manager & Automation Specialist do?</h4>
                   <p className="text-sm">
-                    An Automation Specialist designs, implements, and maintains automated systems and workflows to improve efficiency, reduce manual tasks, and optimize business processes.
+                    I lead operational strategy while implementing technical automation solutions that streamline workflows, optimize communication systems, and enhance data-driven decision making to maximize efficiency and reliability.
                   </p>
                 </div>
               </HoverCardContent>
             </HoverCard>{" "}
-            who helps companies streamline operations and boost productivity through custom automation solutions.
+            with a proven track record of transforming business operations through technical innovation and process optimization.
           </div>
           
           <div className="space-y-3">
-            <p className="font-medium">Specializing in:</p>
+            <p className="font-medium">Expertise:</p>
             <div className="flex flex-wrap gap-2">
-              <Badge variant="outline" className="text-sm py-1 px-3">Email Protocols (DMARC/SPF/DKIM)</Badge>
-              <Badge variant="outline" className="text-sm py-1 px-3">Process Automation</Badge>
-              <Badge variant="outline" className="text-sm py-1 px-3">CRM Integration</Badge>
-              <Badge variant="outline" className="text-sm py-1 px-3">Data Visualization</Badge>
-              <Badge variant="outline" className="text-sm py-1 px-3">Workflow Optimization</Badge>
+              <Badge variant="outline" className="text-sm py-1 px-3">Custom Automation Development</Badge>
+              <Badge variant="outline" className="text-sm py-1 px-3">Client Communication Systems</Badge>
+              <Badge variant="outline" className="text-sm py-1 px-3">CRM & Airtable Integration</Badge>
+              <Badge variant="outline" className="text-sm py-1 px-3">PowerBI Data Visualization</Badge>
+              <Badge variant="outline" className="text-sm py-1 px-3">Data Processing Automation</Badge>
             </div>
           </div>
           
@@ -129,23 +129,23 @@ export default function HeroSection() {
                     <path d="m9 12 2 2 4-4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Automation Impact</h3>
+                <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                   <div className="p-4 rounded-lg bg-background/80 border border-border">
-                    <div className="text-3xl font-bold text-primary">98%</div>
-                    <div className="text-sm text-muted-foreground">Email deliverability rate</div>
+                    <div className="text-3xl font-bold text-primary">75%</div>
+                    <div className="text-sm text-muted-foreground">Reduction in manual data entry with CRM automation</div>
                   </div>
                   <div className="p-4 rounded-lg bg-background/80 border border-border">
                     <div className="text-3xl font-bold text-primary">90%</div>
-                    <div className="text-sm text-muted-foreground">Reduction in technical issues</div>
+                    <div className="text-sm text-muted-foreground">Reduction in manual data processes</div>
                   </div>
                   <div className="p-4 rounded-lg bg-background/80 border border-border">
-                    <div className="text-3xl font-bold text-primary">75%</div>
-                    <div className="text-sm text-muted-foreground">Reduction in manual data entry</div>
+                    <div className="text-3xl font-bold text-primary">80%</div>
+                    <div className="text-sm text-muted-foreground">Increased decision-making efficiency</div>
                   </div>
                   <div className="p-4 rounded-lg bg-background/80 border border-border">
-                    <div className="text-3xl font-bold text-primary">40%</div>
-                    <div className="text-sm text-muted-foreground">Improvement in documentation</div>
+                    <div className="text-3xl font-bold text-primary">5%</div>
+                    <div className="text-sm text-muted-foreground">Annual decrease in crime rates through data analysis</div>
                   </div>
                 </div>
               </div>
