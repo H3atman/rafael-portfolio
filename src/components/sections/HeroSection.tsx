@@ -52,9 +52,9 @@ export default function HeroSection() {
         <div className="space-y-6">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
             Transforming Businesses Through{" "}
-            <span className="relative">
+            <span className="relative inline-block">
               <span className="text-primary">AI-Powered Automation</span>
-              <span className="absolute -bottom-2 left-0 h-1 w-full bg-primary rounded-full"></span>
+              <span className="absolute -bottom-3 left-0 h-1 w-full bg-primary rounded-full"></span>
             </span>
           </h2>
           
