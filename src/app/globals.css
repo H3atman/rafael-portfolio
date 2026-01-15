@@ -47,29 +47,36 @@
 
 :root {
   --background: oklch(1 0 0);
-  --foreground: oklch(0 0 0); /* Pure black */
+  --foreground: oklch(0 0 0);
+  /* Pure black */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0 0 0);
-  --primary: oklch(0 0 0); /* Black buttons */
-  --primary-foreground: oklch(1 0 0); /* White text */
-  --secondary: oklch(0.96 0 0); /* Light gray for secondary */
+  --primary: oklch(0 0 0);
+  /* Black buttons */
+  --primary-foreground: oklch(1 0 0);
+  /* White text */
+  --secondary: oklch(0.96 0 0);
+  /* Light gray for secondary */
   --secondary-foreground: oklch(0 0 0);
   --muted: oklch(0.96 0 0);
-  --muted-foreground: oklch(0.45 0 0); /* Gray text */
+  --muted-foreground: oklch(0.45 0 0);
+  /* Gray text */
   --accent: oklch(0.96 0 0);
   --accent-foreground: oklch(0 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.898 0 0); /* Light gray border */
+  --border: oklch(0.898 0 0);
+  /* Light gray border */
   --input: oklch(0.898 0 0);
   --ring: oklch(0 0 0);
   --radius: 0.5rem;
 }
 
 .dark {
-  --background: oklch(0.1 0 0); /* Dark mode equivalent (if used) */
+  --background: oklch(0.1 0 0);
+  /* Dark mode equivalent (if used) */
   --foreground: oklch(1 0 0);
   --card: oklch(0.1 0 0);
   --card-foreground: oklch(1 0 0);
@@ -97,18 +104,9 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground overflow-x-hidden font-mono;
-    background-image: 
-        linear-gradient(to right, #E5E5E5 1px, transparent 1px),
-        linear-gradient(to bottom, #E5E5E5 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-  
-  .dark body {
-    background-image: 
-        linear-gradient(to right, #333 1px, transparent 1px),
-        linear-gradient(to bottom, #333 1px, transparent 1px);
   }
 
   /* Vignette effect */
