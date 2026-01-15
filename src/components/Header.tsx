@@ -22,15 +22,15 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 function throttle<T extends (...args: any[]) => any>(func: T, limit: number) {
   let inThrottle: boolean;
   let lastResult: ReturnType<T>;
-  
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return function(this: any, ...args: Parameters<T>): ReturnType<T> {
+  return function (this: any, ...args: Parameters<T>): ReturnType<T> {
     if (!inThrottle) {
       inThrottle = true;
       lastResult = func.apply(this, args);
       setTimeout(() => (inThrottle = false), limit);
     }
-    
+
     return lastResult;
   };
 }
@@ -53,24 +53,20 @@ export default function Header() {
 
   return (
     <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled
-          ? "bg-background/80 backdrop-blur-md py-2 shadow-md"
-          : "bg-transparent py-4"
-      )}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 font-mono border-b border-border bg-background/95 backdrop-blur-sm"
     >
-      <Container className="flex items-center justify-between">
+      <Container className="flex items-center justify-between h-16">
+
         {/* Logo */}
         <Link
           href="/"
           className="text-xl font-bold tracking-tight hover:opacity-80 transition-opacity flex items-center"
         >
-          <Image 
-            src="/brand_guidelines/logo.png" 
-            alt="RV Logo" 
-            width={48} 
-            height={48} 
+          <Image
+            src="/brand_guidelines/logo.png"
+            alt="RV Logo"
+            width={48}
+            height={48}
             className="h-auto w-auto dark:invert"
             priority
           />
@@ -91,7 +87,7 @@ export default function Header() {
               ))}
             </NavigationMenuList>
           </NavigationMenu>
-          
+
           {/* Theme Toggle */}
           <ThemeToggle />
         </div>
@@ -100,7 +96,7 @@ export default function Header() {
         <div className="flex items-center gap-2 md:hidden">
           {/* Theme Toggle for Mobile */}
           <ThemeToggle />
-          
+
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" aria-label="Menu">

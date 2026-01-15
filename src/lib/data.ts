@@ -1,10 +1,10 @@
 export const websiteConfig = {
   name: "Rafael",
-  title: "Operations Manager & Automation Specialist",
+  title: "Operations Business Manager",
   email: "rafael@rvcodes.com",
   github: "https://github.com/H3atman",
   linkedin: "https://www.linkedin.com/in/villanueva-rafael/",
-  about: "As an Operations Manager and Automation Specialist, I create seamless client experiences through custom integrations, workflow automation, and data management. My expertise spans designing integrated systems between GoHighLevel, Airtable, and custom client portals that have reduced manual work by 85% and technical support tickets by 70%. I've engineered automated contract signing and billing systems that cut document processing time by 90% and launched a company-wide referral system that increased qualified leads by 45%. By implementing DMARC, SPF, and DKIM protocols, I've enhanced email deliverability rates from 76% to 98%. With a strong background in data analysis since 2019, I combine technical skills in API development, JavaScript, Next.js, and Python with AI-driven automation to deliver solutions that significantly improve operational efficiency and reliability for businesses.",
+  about: "As an Operations Business Manager, I specialize in transforming business data into actionable strategic insights. I bridge the gap between complex operational challenges and technical solutions by leveraging Data Processing, Analytics, and AI-driven Automation. My expertise lies in designing integrated systems that not only automate workflows but also provide deep business intelligence—empowering organizations to make data-backed decisions. From reducing manual work by 85% to increasing qualified leads by 45%, I architect solutions that drive efficiency, scalability, and measurable growth.",
   resumeLink: "/resume/Rafael Villanueva - Resume.pdf",
 };
 
@@ -30,29 +30,29 @@ export const navigationLinks = [
 
 export const skillsData = {
   programmingLanguages: [
+    { name: "Data Processing & ETL", level: 95 },
+    { name: "Python (Pandas/NumPy)", level: 90 },
+    { name: "SQL & Database Design", level: 85 },
     { name: "JavaScript/Next.js", level: 85 },
-    { name: "Python", level: 90 },
+    { name: "API Integration", level: 90 },
     { name: "HTML/CSS", level: 80 },
-    { name: "API Development", level: 90 },
-    { name: "Database Design", level: 80 },
-    { name: "ETL Processes", level: 85 },
   ],
   automationTools: [
     { name: "GoHighLevel CRM", level: 95 },
-    { name: "Airtable", level: 95 },
-    { name: "Copilot Client Portal", level: 90 },
-    { name: "OpenAI, Claude & DeepSeek", level: 90 },
-    { name: "Slack Integrations", level: 90 },
-    { name: "Email Deliverability (DMARC/SPF/DKIM)", level: 90 },
-    { name: "Workflow Design & Implementation", level: 95 },
+    { name: "Airtable Architecture", level: 95 },
+    { name: "Business Process Automation", level: 95 },
+    { name: "OpenAI & LLM Integration", level: 90 },
+    { name: "Email Deliverability (DMARC/SPF)", level: 90 },
+    { name: "Client Portal Development", level: 90 },
+    { name: "Slack Workflows", level: 90 },
   ],
   otherSkills: [
-    { name: "Data Processing & Analysis", level: 90 },
-    { name: "Critical Thinking & Problem-solving", level: 90 },
+    { name: "Strategic Operations Management", level: 95 },
+    { name: "Data Analysis & Visualization", level: 95 },
+    { name: "Business Intelligence", level: 90 },
+    { name: "Process Optimization (Six Sigma)", level: 90 },
+    { name: "Cross-functional Leadership", level: 90 },
     { name: "Client Relationship Management", level: 85 },
-    { name: "Cross-functional Team Leadership", level: 85 },
-    { name: "Process Optimization & Redesign", level: 90 },
-    { name: "Integration & Workflow Design", level: 95 },
   ],
 };
 
@@ -107,7 +107,7 @@ export const projectsData: Project[] = [
   {
     title: "KP Cases Management System",
     description: "A comprehensive case management system developed for law enforcement, featuring user authentication, case encoding, and advanced search capabilities. Built with modern web technologies and secure authentication practices.",
-    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Supabase","Tailwind CSS", "Authentication", "shadcn/ui"],
+    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Supabase", "Tailwind CSS", "Authentication", "shadcn/ui"],
     image: "/projects/kp-cases-login.png",
     images: [
       "/projects/kp-cases-login.png",
@@ -124,7 +124,7 @@ export const projectsData: Project[] = [
     images: [
       "/projects/mikrotik-manager-login.jpg",
       "/projects/mikrotik-manager-main.jpg"
-      
+
     ],
     link: "https://github.com/H3atman/mikrotik-manager",
     github: "https://rg-networks.vercel.app/",
